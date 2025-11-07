@@ -1,2 +1,2 @@
 # rent-himalayas
-2nd semester project with domain homestay management ,
+2nd semester WebStack project with domain homestay management.
