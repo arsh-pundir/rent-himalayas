@@ -18,9 +18,35 @@ body{
     z-index: 1000;
     top: 0;
 
-    
+
 
 }
+.menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  border: 1px solid #ccc;
+  background: white;
+  width: 150px;
+  display: none;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #f0f0f0;
+}
+
+.show {
+  display: block;
+}
+.menu.show{
+    display:block;
+}
+
 .renthim{
     display: flex;
     align-items: center;
@@ -35,6 +61,7 @@ body{
     color: darkorange;
 
 }
+
 .himalayas{
     
     font-size: 1.5rem;
@@ -47,9 +74,11 @@ body{
     background-color: rgb(255, 115, 0);
     border-radius: 8px;
     color: white;
-    display: flex;
+    display: flex; 
+    width:8%;
+    text-align:center;
     align-items: center;
-    padding: 8px 20px;
+    padding: 8px;
     border: none;
     font-size: 16px;
 }

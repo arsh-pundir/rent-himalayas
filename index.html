@@ -12,7 +12,12 @@
     <span class="rent">Rent</span>
     <span class="himalayas">Himalayas</span>
         </div>
-        <button class="solan"> <img src="file:///C:/Users/arshp/Downloads/location-pin-svgrepo-com.svg" alt="svg">Solan</button>
+        <button class="solan" id="solan"> <img src="file:///C:/Users/arshp/Downloads/location-pin-svgrepo-com.svg" alt="svg">Solan</button>
+        <div id="locationMenu" class="menu hidden">
+        <div class="menu-item">Shimla</div>
+        <div class="menu-item">McLeod Ganj</div>
+        <div class="menu-item">Apple Garden</div>
+</div>
 
        
             <ol class="midnav">
@@ -78,5 +83,27 @@ here to help you find exactly what suits your needs in where you are</div>
     <div class="end">
         this is the end of the page
     </div>
+    <script>
+const btn = document.getElementById("solan");
+const menu = document.getElementById("locationMenu");
+const items = document.querySelectorAll(".menu-item");
+btn.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    btn.innerHTML = item.textContent;  
+    menu.classList.remove("show");  
+  });
+});
+  document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && e.target !== btn) {
+    menu.classList.remove("show");
+  }
+});
+</script>
+
 </body>
 </html>
