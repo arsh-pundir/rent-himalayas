@@ -265,7 +265,7 @@ body{
 }
 
 .option{
-    background-color:  #511212;
+    background-color:  #ffffff;
     margin-left: 5vh;
     margin-right: 5vh;
     margin-top: 11vh;
@@ -277,23 +277,56 @@ body{
     
 }
 .firstoption{
-    background-color: aqua;
-   width: 36vw;
-   height: 36vh;
+    background-color: rgb(255, 255, 255);
+   width: 40vw;
+   height: 35vh;
    margin-top: 2rem;
+   display: flex;
+   justify-content: space-between;
 }
+.text1{
+    background-color: blue;
+     width: 59%;
+     border-radius: 12px;
+}
+.img1,.img2,.img3{
+    background-image: url(https://i.pinimg.com/736x/b1/5f/25/b15f257289f1d06d0e4dd4fc332de429.jpg);
+    display: flex;
+    width: 40%;
+    border-radius: 12px;
+    background-size: cover;
+   
+    
+}
+
 .secondoption{
-    background-color: yellow;
-   width: 36vw;
-   height: 36vh;
+    background-color: rgb(255, 255, 255);
+   width: 40vw;
+   height: 35vh;
    margin-top: 3rem;
+   display: flex;
+   justify-content: space-between;
 }
+
+.text2{
+    background-color: green;
+     width: 59%;
+    border-radius: 12px;
+}
+
 .thirdoption{
-    background-color: lightgreen;
-   width: 36vw;
-   height: 36vh;
+    background-color: rgb(255, 255, 255);
+   width: 40vw;
+   height: 35vh;
    margin-top: 3rem;
    margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+}
+.text3{
+    background-color: orange;
+    width: 59%;
+    border-radius: 12px;
 }
 .footer{
     background-color: #511212;

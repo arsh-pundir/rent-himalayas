@@ -1,0 +1,94 @@
+body{
+    
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.contained{
+   width: 100vw;
+    height: 100vh;
+     background-image: url(https://static.vecteezy.com/system/resources/previews/026/349/451/large_2x/cozy-winter-bedroom-with-snow-outside-window-generated-by-ai-free-photo.jpg);
+    background-size: cover;
+
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 10vh;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 8px;
+    box-shadow: 10 10px 15px rgba(0, 0, 0,);
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 15vh;
+   
+}
+.loginbox h2{
+    opacity: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+.loginbox hr{
+   width: 250px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    margin-top: -20px;
+}
+.loginbox input[type="text"], .loginbox input[type="password"]{
+    padding: 10px;
+       
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    font-size: 12px;
+}
+.loginbox input[type="submit"]{
+    background-color: darkorange;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.inputbox label{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-top: 2vh;
+}
+.inputbox input{
+    padding: 8px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    font-size: 16px;
+}
+.loginbox button{
+    background-color: rgb(252, 151, 28);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 2vh;
+    width: 20vw;
+}
+.signuptext{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
