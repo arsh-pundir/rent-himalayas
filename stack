@@ -1,30 +1,42 @@
-class Stack{
-private:
-    int size,top;
-    string *arr;
+class Stack {
+    int arr[MAX];
+    int top;
 
 public:
-    Stack(int s){
-        size=s;
-        top=-1;
-        arr=new string[size];
+    Stack() {
+        top = -1;
     }
 
-    ~Stack(){
-        delete[] arr;
+    bool isEmpty() {
+        return top == -1;
     }
 
-    bool isEmpty(){
-        return top==-1;
+    bool isFull() {
+        return top == MAX - 1;
     }
 
-    void push(string x){
-        arr[++top]=x;
+    void push(int x) {
+        if (isFull()) {
+            cout << "Stack overflow\n";
+            return;
+        }
+        arr[++top] = x;
     }
 
-    string pop(){
-        if(isEmpty())
-        return "No song";
-        return arr[top--];
+    void pop() {
+        if (isEmpty()) {
+            cout << "Stack underflow\n";
+            return;
+        }
+        top--;
+    }
+
+    int peek() {
+        if (isEmpty()) {
+            cout << "Stack is empty\n";
+            return -1;
+        }
+        return arr[top];
     }
 };
+
