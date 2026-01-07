@@ -1,0 +1,30 @@
+class Stack{
+private:
+    int size,top;
+    string *arr;
+
+public:
+    Stack(int s){
+        size=s;
+        top=-1;
+        arr=new string[size];
+    }
+
+    ~Stack(){
+        delete[] arr;
+    }
+
+    bool isEmpty(){
+        return top==-1;
+    }
+
+    void push(string x){
+        arr[++top]=x;
+    }
+
+    string pop(){
+        if(isEmpty())
+        return "No song";
+        return arr[top--];
+    }
+};
