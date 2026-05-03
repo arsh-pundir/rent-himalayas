@@ -12,7 +12,12 @@
     <span class="rent">Rent</span>
     <span class="himalayas">Himalayas</span>
         </div>
-        <button class="solan"> <img src="file:///C:/Users/arshp/Downloads/location-pin-svgrepo-com.svg" alt="svg">Solan</button>
+        <button class="solan" id="solan"> <img src="file:///C:/Users/arshp/Downloads/location-pin-svgrepo-com.svg" alt="svg">Solan</button>
+        <div id="locationMenu" class="menu hidden">
+        <div class="menu-item">Shimla</div>
+        <div class="menu-item">McLeod Ganj</div>
+        <div class="menu-item">Apple Garden</div>
+</div>
 
        
             <ol class="midnav">
@@ -30,8 +35,9 @@
   </div>
   <section class="container page-section" id="hero">
     <div class="slide-wrapper">
-        <div class="slider" id="slider">
-            <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/9c427f3bca0485bd13e236b5c8bb88a8e5b08ede/assets/slide11.avif" alt="slide 1" id="slide1">
+        
+        <div class="slider">
+            <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/refs/heads/fix-slider/assets/slide11.avif" alt="slide 1" id="slide1">
             <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/3557e8f1317b8a36bdaee8588dd31fb4a0649c4b/assets/slide22.webp" alt="slide 2" id="slide2">
             <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/3557e8f1317b8a36bdaee8588dd31fb4a0649c4b/assets/slide33.jpg" alt="slide 3" id="slide3">
         </div>
@@ -76,5 +82,27 @@ here to help you find exactly what suits your needs in where you are</div>
         this is the end of the page
     </div>
     <script src="script.js"></script>
+    <script>
+const btn = document.getElementById("solan");
+const menu = document.getElementById("locationMenu");
+const items = document.querySelectorAll(".menu-item");
+btn.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    btn.innerHTML = item.textContent;  
+    menu.classList.remove("show");  
+  });
+});
+  document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && e.target !== btn) {
+    menu.classList.remove("show");
+  }
+});
+</script>
+
 </body>
 </html>
