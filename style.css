@@ -1,10 +1,7 @@
 body{
     background-color: rgb(255, 255, 255);
-
     font-family: Arial, sans-serif;
-    
     margin: 0;
-    
 }
 .navbar{
     font-family: sans-serif;
@@ -116,26 +113,23 @@ body{
 }
 .container{
     width: 100%;
-    max-height: 88vh;
-    margin-top: -9vh;
-    
-     
+    min-height: auto;
+    padding-top: 0.75rem;
+    display: flex;
+    align-items: flex-start;
 }
  .slide-wrapper{
     position: relative;
     max-width: 90vw;
-    margin: 0 auto;
+    width: 90vw;
+    margin: 0 auto 0;
  }
 .slider{
     display: flex;
     aspect-ratio: 16/7.5;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
     box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.6);
     border-radius: 20px;
-    
-
 }
 
 
@@ -143,9 +137,10 @@ body{
     z-index: 10;
     
     position: absolute;
-    margin-top: -65vh;
-    margin-left: 15vh;
-    transform: translate(50%);
+    left: 50%;
+    top: 24%;
+    width: min(80%, 760px);
+    transform: translateX(-50%);
     
 
     
@@ -171,12 +166,13 @@ body{
 }
 
  .search{ 
-    width: 70%;
+    width: min(70%, 760px);
     z-index: 10;
     border: #511212;
     position: absolute;
-    margin-top: -30vh;
-    margin-left: 24vh;
+    left: 50%;
+    bottom: 16%;
+    transform: translateX(-50%);
     
 }
 
@@ -185,28 +181,15 @@ body{
     width: 100%;
     border-radius: 30px;
     padding: 12px 20px;
-    height: 3vh;
+    min-height: 3.25rem;
+    box-sizing: border-box;
 }
 
 .slider img{
     flex: 1 0 100%;
     object-fit: cover;
-    scroll-snap-align: start;
-    animation: autoSlide 15s infinite;
+    display: block;
 }
- @keyframes autoSlide {
-    0% { scroll-snap-align: start; transform: translateX(0%); }
-    10% { transform: translateX(0%); }
-
-    22% { transform: translateX(-100%); }
-    50% { transform: translateX(-100%); }
-   
-    60%{ transform: translateX(-200%); }
-    80% { transform: translateX(-200%); }
-    
-    90% { transform: translateX(0%); }
-    100% { transform: translateX(0%); }
-  }
 ::-webkit-scrollbar{
     display: none;
 }
@@ -214,35 +197,36 @@ body{
     display: flex;
     column-gap: 1.5rem;
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 12;
 }
-.slidernav a{
+.slider-dot{
     width: 2rem;
     height: 0.35rem;
+    padding: 0;
+    border: none;
     border-radius: 30%;
     background-color: white;
-    opacity: 0.5;
-    transition: opacity ease 250ms;
+    opacity: 0.45;
+    cursor: pointer;
+    transition: opacity ease 250ms, transform ease 250ms, background-color ease 250ms;
 }
-.slidernav a:hover{
+.slider-dot:hover,
+.slider-dot.active{
     opacity: 1;
+    background-color: rgb(255, 115, 0);
+    transform: scale(1.08);
 }
 
-    .content{
+.content{
     width: auto;
-    /* margin-left: 5vh;
-    margin-right: 5vh;
-    margin-top: 4vh; */
-   
+    min-height: 100vh;
+    padding-top: 6rem;
     color: rgb(0, 0, 0);
     display: flex;
-  
     flex-direction: column;
-   
-
 }
 .wassup {
     font-size: 40px;
@@ -346,4 +330,73 @@ body{
     margin-left: 5vh;
     margin-right: 5vh;
     margin-bottom: 4vh;
+}
+
+@media (max-width: 900px){
+    .container{
+        min-height: auto;
+        padding: 0.75rem 0 2rem;
+    }
+
+    div.text{
+        top: 18%;
+    }
+
+    .movein{
+        font-size: 42px;
+    }
+
+    .yourroom{
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .search{
+        bottom: 12%;
+        width: min(82%, 760px);
+    }
+
+    .content{
+        min-height: auto;
+        padding: 4rem 1.5rem 0;
+    }
+
+    .wassup,
+    .sent{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 640px){
+    .slide-wrapper{
+        width: 94vw;
+    }
+
+    div.text{
+        top: 14%;
+        width: 86%;
+    }
+
+    .movein{
+        font-size: 34px;
+    }
+
+    .yourroom{
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .search{
+        width: 86%;
+        bottom: 10%;
+    }
+
+    .slidernav{
+        bottom: 1.25rem;
+        column-gap: 0.9rem;
+    }
+
+    .slider-dot{
+        width: 1.35rem;
+    }
 }

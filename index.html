@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent himalayas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
   <div class="navbar">
     <div class="renthim">
@@ -16,7 +16,7 @@
 
        
             <ol class="midnav">
-                <li><a href="#">Home</a></li>
+                <li><a href="#hero" id="home-link">Home</a></li>
                 <li><a href="#">Booking</a></li>
                 <li><a href="#">Rooms</a></li>
                 <li><a href="#">Rent</a></li>
@@ -28,31 +28,28 @@
             <button class="signup">Signup</button>
         </div>
   </div>
-  <br><br><br><br><br>
-  <section class="container">
+  <section class="container page-section" id="hero">
     <div class="slide-wrapper">
-        
-        <div class="slider">
+        <div class="slider" id="slider">
             <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/9c427f3bca0485bd13e236b5c8bb88a8e5b08ede/assets/slide11.avif" alt="slide 1" id="slide1">
             <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/3557e8f1317b8a36bdaee8588dd31fb4a0649c4b/assets/slide22.webp" alt="slide 2" id="slide2">
             <img src="https://raw.githubusercontent.com/arsh-pundir/rent-himalayas/3557e8f1317b8a36bdaee8588dd31fb4a0649c4b/assets/slide33.jpg" alt="slide 3" id="slide3">
-    </div>
-      <div class="text">
+        </div>
+        <div class="text">
             <div class="movein">Move In,Feel At Home</div>
             <div class="yourroom">Your Room,Your Heaven-Find Your Perfect Fit</div>
         </div>
         <div class="search">
             <input type="text" placeholder="State,City,Zipcode,Etc.">
         </div>
-    </div>
-        </section>
-        <div class="slidernav">
-            <a href="#slider1"></a>
-            <a href="#slider2"></a>
-            <a href="#slider3"></a>
+        <div class="slidernav" aria-label="Slider navigation">
+            <button class="slider-dot active" type="button" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="slider-dot" type="button" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="slider-dot" type="button" data-slide="2" aria-label="Go to slide 3"></button>
         </div>
     </div>
-    <div class="content">
+  </section>
+    <div class="content page-section" id="area">
       <div class="wassup"> <h2>What's Happening in Your Area</h2></div>
       <div class="sent"> Whether you're searching for a room to rent, a property to buy, or an investment opportunity, we're 
 here to help you find exactly what suits your needs in where you are</div>
